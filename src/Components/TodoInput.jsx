@@ -33,7 +33,7 @@ const TodoInput = () => {
   const [message, setMessage] = useState("");
   const [todos, setTodos] = useState(array);
   const [filter, setFilter] = useState("all");
-
+  const [search, setSearch] = useState("");
   const handleTodo = () => {
     const payload = {
       id: Date.now(),
@@ -69,10 +69,19 @@ const TodoInput = () => {
       return true;
     }
   });
-
+  // Now Add Search Filter
+  const handleSearch = () => {
+    let searchTodo = todos.filter((todo) => todo.message.includes(search));
+    setTodos(searchTodo);
+  };
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div>
+          <label>Search by Todo</label>
+          <input type="text" onChange={(e) => setSearch(e.target.value)} />
+          <button onClick={handleSearch}>Search</button>
+        </div>
         <div>
           <label>Add Todo</label>
           <input
