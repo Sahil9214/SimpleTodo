@@ -8,7 +8,7 @@ This is a comprehensive Todo application developed using React. The application 
 - **Update Todo**: Users can update the status of their tasks, marking them as completed or uncompleted.
 - **Delete Todo**: Provides the option to delete tasks from the list.
 - **Filter Todo**: Users can filter their tasks based on their completion status - view all tasks, only completed tasks, or only uncompleted  tasks.
-- **Search Todo**: Users can Search their tasks based on their completion status 
+- **Search Todo**: Users can Search their tasks based on their todos
 
 
 ## Getting Started
